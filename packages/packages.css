@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto Mono";
+}
+.background{
+    background: url("../images/working.jpg") center/cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: -1;
+}
+.plans-section{
+    margin: 1rem 0;
+    border: 3px solid rgb(2, 36, 2);
+    border-left: none;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+.plans-section:hover,
+.plans-section:active,
+.plans-section.bg-light:hover{
+    border-color: tomato;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.plan-section-link{
+    text-decoration: none;
+    display: block;
+    padding: 2rem;
+}
+.plan-section-link h1{
+    color: black;
+}
+.plan-section-link h2{
+    color: rgb(134, 134, 134);
+}
+#recommended{
+    color: white;
+    background: #f57171;
+    font-size: 0.99rem;
+    padding: 0.5rem;
+    position: absolute;
+    margin: 0;
+    right: 0;
+    top: 0;
+    width: 12rem;
+    text-align: center;
+    transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+}
+.plan-section-link p{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 1rem;
+}
+.floatfix{
+    clear: both;
+}
+.plans-section.bg-light-green{
+    margin-top: 4rem;
+}
+
+.plans-section.bg-light{
+    float: right;
+    border-right: none;
+    border: 3px solid rgb(2, 36, 2);
+    text-align: right;
+}
+
+.bg-light-green{
+    background-color: rgb(197, 255, 197,0.7);
+}
+.bg-light{
+    background-color: rgb(236, 236, 236,0.7);
+}
+.bg-dark-green{
+    background-color: rgb(43, 66, 43,0.7);
+}
+.bg-dark-green h1{
+    color: white;
+}

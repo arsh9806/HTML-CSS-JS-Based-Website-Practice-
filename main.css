@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto Mono";
+}
+#product-overview h1{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+}
+#product-overview{
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 80vh;
+    background: url("https://images.wallpaperscraft.com/image/silhouette_sea_man_122577_1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+@media (min-width: 40rem){
+    #product-overview{
+        font-size: 1.3rem;
+    }
+}
+.modal {
+    position: fixed;
+    display: none;
+    opacity: 0;
+    z-index: 200;
+    transform: translateY(3rem);
+    transition: all 500ms;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.open{
+    opacity: 1 !important;
+    display: block !important;
+    transform: translateY(0) !important;
+
+}
+.modal__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+    text-align: center;
+}
+
+.modal__action {
+    border: 1px solid #0e4f1f;
+    background: #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+    background: red;
+    border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+    background: #ff5454;
+    border-color: #ff5454;
+} 
+
+.section-title{
+    width: 100%;
+    text-align: center;
+    color: rgb(35, 155, 35);
+    margin: 13px;
+}
+#plans .plan{
+    background-color: rgb(162, 212, 162);
+    text-align: center;
+    /* display: inline-block; */
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin: 3px;
+    
+}
+.plan ul li{
+    display: block;
+}
+#plans .plan--highlight{
+    color: white;
+    background-color: #19b84c;
+}
+.plan--annotation{
+    color:#19b84c;
+    background-color:white;
+    padding:8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+.plan--features{
+    text-decoration: none;
+    margin:0;
+    padding:0;
+}
+.plan--features li{
+    margin: 8px 0;
+}
+
+.button{
+    padding: 8px;
+    background-color: rgb(10, 71, 10);
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    font:inherit;
+    font-weight: bold;
+    border: 3px solid rgb(10, 71, 10);
+    transition: background-color 500ms;
+}
+.button:hover,
+.button:active{
+    background-color: white;
+    color: #044704;
+}
+.button:focus{
+    outline: none;
+}
+#key-features{
+    background-color: #ff8b8b;
+    padding: 16px;
+    margin-top: 50px;
+}
+#key-features .section-title{
+    color: white;
+    font-size: 1.3rem;
+}
+.feature{
+    width: auto;
+    display: block;
+    margin: auto;
+}
+.key-features-list{
+    text-align: center;
+    margin-top: 30px;
+}
+.key-feature-img{
+    width: 128px;
+    height: 128px;
+    border: 2px solid black;
+    background-color: cadetblue;
+    border-radius: 50%;
+    margin: auto;
+
+}
+.key-features-discription{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+@media(min-width: 44rem){
+    #plans .plan{
+        display: inline-block;
+        width: 30%;
+        vertical-align: middle;
+        min-width: 10.3rem;
+        max-width: 20rem;
+    }
+    .plan__list{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    #plans .plan--highlight{
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+    .feature{
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+
+    }
+    #key-features .section-title{
+        font-size: 1.5rem;
+    }
+    .key-features-discription{
+        font-size: 1.3rem;
+    }
+
+}

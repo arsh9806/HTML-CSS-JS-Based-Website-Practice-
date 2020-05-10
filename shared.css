@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body{
+    display: grid;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono";
+}
+.backdrop{
+    display: none;
+    opacity: 0;
+    transition: opacity 500ms;
+    position: fixed;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+}
+
+header{
+    background-color: rgb(62, 224, 62);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobile-nav {
+display: none;
+position: fixed;
+z-index: 101;
+top: 0;
+left: 0;
+background: white;
+width: 80%;
+height: 100vh;
+}
+
+.mobile-nav__items {
+width: 90%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+flex-wrap: wrap;
+list-style: none;
+margin: 10% auto;
+padding: 0;
+text-align: center;
+}
+
+.mobile-nav__item {
+margin: 1rem auto;
+width: max-content;
+}
+
+.mobile-nav__item a {
+font-size: 1.5rem;
+}
+.navbar-brand{
+    margin: 10px 20px;
+}
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+  }
+  
+.navbar-brand a{
+    text-decoration: none;
+    color: #044704;
+    font-weight: bold;
+    font-size: larger;
+    height: 45px;
+}
+
+.nav-item a,
+.mobile-nav a{
+    text-decoration: none;
+    color: #044704;
+    transition: color 500ms;
+    padding-bottom: 5px;
+    display: none;
+}
+.mobile-nav a{
+    display: block;
+}
+.nav-item a:hover,
+.nav-item a:active
+{
+    color: white;
+}
+#Hosting,
+.mobile-nav__item--cta{
+    background-color: #ffc5da;
+    transition: color 500ms;
+    border-radius: 5px;
+    padding: 4px 12px;
+    border: none;
+}
+#Hosting:hover,
+.mobile-nav__item--cta a:hover{
+    color: white;
+    border: none;
+}
+#Hosting{
+    animation: wiggle 500ms 2s 5 none;
+}
+li{
+    display: inline-block;
+    list-style: none;
+    padding: 0 13px;
+}
+.main-footer{
+    background: black;
+    padding: 16px;
+    margin-top: 32px;
+}
+.main-footer-nav-links{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.main-footer-nav-link{
+    margin:0.5rem 0;
+}
+.main-footer-nav-link a{
+    text-decoration: none;
+    color: white;
+}
+.main-footer-nav-link a:hover,
+.main-footer-nav-link a:active{
+    color: #ccc;
+}
+@media(min-width:40rem){
+    .toggle-button{
+        display: none;
+    }
+    .nav-item a{
+        display: flex;
+    }
+    .main-footer-nav-links{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+@keyframes wiggle{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(-10deg);
+    }
+    100%{
+        transform: rotateZ(10deg);
+    }
+}
